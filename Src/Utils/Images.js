@@ -62,20 +62,20 @@ const Images = {
 
     // tshirt images
 
-    tshirt1_icon: require('../../Assets/Images/tshirt1.jpeg'),
-    tshirt2_icon: require('../../Assets/Images/tshirt2.jpeg'),
-    tshirt3_icon: require('../../Assets/Images/tshirt3.jpeg'),
-    tshirt4_icon: require('../../Assets/Images/tshirt4.jpeg'),
+    tshirt1_icon: require('../../Assets/Images/tshirt1.jpg'),
+    tshirt2_icon: require('../../Assets/Images/tshirt2.jpg'),
+    tshirt3_icon: require('../../Assets/Images/tshirt3.jpg'),
+    tshirt4_icon: require('../../Assets/Images/tshirt4.jpg'),
     tshirt5_icon: require('../../Assets/Images/tshirt5.jpg'),
     tshirt6_icon: require('../../Assets/Images/tshirt6.jpg'),
     tshirt7_icon: require('../../Assets/Images/tshirt7.jpeg'),
 
     // jeans images
 
-    jeans1_icon: require('../../Assets/Images/jeans1.jpeg'),
-    jeans2_icon: require('../../Assets/Images/jeans2.jpeg'),
-    jeans3_icon: require('../../Assets/Images/jeans3.jpeg'),
-    jeans4_icon: require('../../Assets/Images/jeans4.jpeg'),
+    jeans1_icon: require('../../Assets/Images/jeans1.jpg'),
+    jeans2_icon: require('../../Assets/Images/jeans2.jpg'),
+    jeans3_icon: require('../../Assets/Images/jeans3.jpg'),
+    jeans4_icon: require('../../Assets/Images/jeans4.jpg'),
     jeans5_icon: require('../../Assets/Images/jeans5.jpeg'),
     jeans6_icon: require('../../Assets/Images/jeans6.jpeg'),
     jeans7_icon: require('../../Assets/Images/jeans7.jpeg'),
@@ -99,6 +99,16 @@ const Images = {
     shirts5_icon: require('../../Assets/Images/shirt5.jpg'),
     shirts6_icon: require('../../Assets/Images/shirt6.jpg'),
     shirts7_icon: require('../../Assets/Images/shirt7.jpg'),
+
+    // watch images
+
+    watch1_icon: require('../../Assets/Images/watch1.jpeg'),
+    watch2_icon: require('../../Assets/Images/watch2.jpeg'),
+    watch3_icon: require('../../Assets/Images/watch3.jpeg'),
+    watch4_icon: require('../../Assets/Images/watch4.jpeg'),
+    watch5_icon: require('../../Assets/Images/watch5.jpeg'),
+    watch6_icon: require('../../Assets/Images/watch6.jpeg'),
+    watch7_icon: require('../../Assets/Images/watch7.jpeg'),
 
 };
 

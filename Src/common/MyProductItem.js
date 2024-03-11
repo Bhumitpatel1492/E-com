@@ -1,21 +1,23 @@
 
 import React, { Component, useEffect } from 'react';
 import { View, StyleSheet, Touchable, Text, Image, TouchableOpacity } from 'react-native';
+import Ionicons from 'react-native-vector-icons/dist/Ionicons';
+import colors from '../Utils/Colours';
 
 const MyProductitem = ({ item }) => {
 
     return (
         <View style={style.container}>
-            <Image source={item.image} style={style.productimg} />
-            <Text style={style.productname}>{item.name}</Text>
+            <Image source={item.image} style={style.productimg} resizeMode='cover' />
+            <Text numberOfLines={1} ellipsizeMode='tail' style={style.productname}>{item.name}</Text>
             <View style={style.cartview}>
                 <Text style={style.pricetxt}>{"₹" + item.price}</Text>
                 <TouchableOpacity style={style.addcartbtn} >
-                    <Text>add to cart</Text>
+                    <Text style={{ color: colors.black }}>add to cart</Text>
                 </TouchableOpacity>
             </View>
             <TouchableOpacity style={style.likebtn}>
-                {/* <Image source={require('../assets/heart.png')} style={style.likeimg} /> */}
+                <Ionicons name="heart" size={26} />
             </TouchableOpacity>
         </View>
     );
@@ -27,7 +29,7 @@ export default MyProductitem;
 const style = StyleSheet.create({
     container: {
         width: 200,
-        height: 200,
+        height: 300,
         borderRadius: 10,
         elevation: 5,
         backgroundColor: "#fff",
@@ -36,15 +38,17 @@ const style = StyleSheet.create({
     },
     productimg: {
         width: '100%',
-        height: '50%',
+        height: '70%',
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10
     },
     productname: {
         marginLeft: 10,
         marginTop: 10,
-        fontSize: 18,
-        fontWeight: "600"
+        fontSize: 14,
+        fontWeight: "600",
+        color: colors.black
+
     },
     cartview: {
         flexDirection: "row",
@@ -55,8 +59,9 @@ const style = StyleSheet.create({
         alignItems: "center"
     },
     pricetxt: {
-        fontSize: 18,
-        fontWeight: "600"
+        fontSize: 15,
+        fontWeight: "600",
+        color: colors.black
     },
     addcartbtn: {
         borderWidth: 1,

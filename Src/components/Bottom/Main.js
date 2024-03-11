@@ -17,17 +17,18 @@ const MainScreen = () => {
     const [kitcheAppliancesList, setKitcheAppliancesList] = useState([]);
 
 
+
     useEffect(() => {
-        if (ProductData && ProductData.length > 0) {
-            const categories = ProductData.map(item => item.category);
+        if (ProductData && ProductData?.length > 0) {
+            const categories = ProductData?.map(item => item?.category);
             setCategoryList(categories);
-            setTshirtList(ProductData.find(item => item.category === 'tshirt')?.data || []);
-            setJeansList(ProductData.find(item => item.category === 'jeans')?.data || []);
-            setShoesList(ProductData.find(item => item.category === 'shoes')?.data || []);
-            setWatchList(ProductData.find(item => item.category === 'watch')?.data || []);
-            setShirtList(ProductData.find(item => item.category === 'shirt')?.data || []);
-            setMobileList(ProductData.find(item => item.category === 'Mobile')?.data || []);
-            setKitcheAppliancesList(ProductData.find(item => item.category === 'kitcheAppliances')?.data || []);
+            setTshirtList(ProductData?.find(item => item?.category === 'tshirt')?.data || []);
+            setJeansList(ProductData?.find(item => item?.category === 'jeans')?.data || []);
+            setShoesList(ProductData?.find(item => item?.category === 'shoes')?.data || []);
+            setWatchList(ProductData?.find(item => item?.category === 'watch')?.data || []);
+            setShirtList(ProductData?.find(item => item?.category === 'shirt')?.data || []);
+            setMobileList(ProductData?.find(item => item?.category === 'Mobile')?.data || []);
+            setKitcheAppliancesList(ProductData?.find(item => item?.category === 'kitcheAppliances')?.data || []);
         }
     }, []);
 

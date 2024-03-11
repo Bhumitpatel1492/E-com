@@ -42,7 +42,15 @@ const shirt5 = Images.shirts5_icon;
 const shirt6 = Images.shirts6_icon;
 const shirt7 = Images.shirts7_icon;
 
+// watch images 
 
+const watch1 = Images.watch1_icon;
+const watch2 = Images.watch2_icon;
+const watch3 = Images.watch3_icon;
+const watch4 = Images.watch4_icon;
+const watch5 = Images.watch5_icon;
+const watch6 = Images.watch6_icon;
+const watch7 = Images.watch7_icon;
 
 
 export const ProductData = [
@@ -276,7 +284,7 @@ export const ProductData = [
         data: [
             {
                 id: 1,
-                image: productimage,
+                image: watch1,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -286,7 +294,7 @@ export const ProductData = [
             },
             {
                 id: 2,
-                image: productimage,
+                image: watch2,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -296,7 +304,7 @@ export const ProductData = [
             },
             {
                 id: 3,
-                image: productimage,
+                image: watch3,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -306,7 +314,7 @@ export const ProductData = [
             },
             {
                 id: 4,
-                image: productimage,
+                image: watch4,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -316,7 +324,7 @@ export const ProductData = [
             },
             {
                 id: 5,
-                image: productimage,
+                image: watch5,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -326,7 +334,7 @@ export const ProductData = [
             },
             {
                 id: 6,
-                image: productimage,
+                image: watch6,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -336,7 +344,7 @@ export const ProductData = [
             },
             {
                 id: 7,
-                image: productimage,
+                image: watch7,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -352,72 +360,72 @@ export const ProductData = [
             {
                 id: 1,
                 image: shirt1,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
+                name: "Levi's Men Shirt",
+                productdetails: "100% Cotton || Solid || Slim Fit || Long Sleeve|| REGULAR COLLAR ||Standard Length",
+                rating: 3.2,
+                ratingCount: 43,
+                price: "1,049",
+                deliveryBy: "FREE delivery Friday, 15 March"
             },
             {
                 id: 2,
                 image: shirt2,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Pepe Jeans Men Shirt",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
+                ratingCount: 33,
+                price: "1,599",
+                deliveryBy: "FREE delivery Saturday, 16 March."
             },
             {
                 id: 3,
                 image: shirt3,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Raymond Slim Fit Medium Casual Shirt for Men",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
+                price: "1,399",
+                deliveryBy: "FREE delivery Friday, 15 March. Details"
             },
             {
                 id: 4,
                 image: shirt4,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Indian Terrain Checks Cotton Slim Fit Men's Casual Shirt",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
+                rating: 5.0,
                 ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
+                price: "₹1,249",
+                deliveryBy: "FREE delivery Saturday, 16 March."
             },
             {
                 id: 5,
                 image: shirt5,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Indian Terrain Printed Cotton Slim Fit Mens Casual Shirt",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
+                price: "989",
+                deliveryBy: "FREE delivery Saturday, 16 March."
             },
             {
                 id: 6,
                 image: shirt6,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Indian Terrain Men's Shirt",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
+                price: "1,049",
+                deliveryBy: "FREE delivery Saturday, 16 March. "
             },
             {
                 id: 7,
                 image: shirt7,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Indian Terrain Printed Cotton Slim Fit Mens Casual Shirt",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
+                price: "1,214",
+                deliveryBy: "FREE delivery Saturday, 16 March."
             }
         ],
     },
