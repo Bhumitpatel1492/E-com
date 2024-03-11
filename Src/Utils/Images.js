@@ -59,6 +59,47 @@ const Images = {
     Cod_icon: require('../../Assets/Images/cash-on-delivery.png'),
     Avord_icon: require('../../Assets/Images/trophy.png'),
 
+
+    // tshirt images
+
+    tshirt1_icon: require('../../Assets/Images/tshirt1.jpeg'),
+    tshirt2_icon: require('../../Assets/Images/tshirt2.jpeg'),
+    tshirt3_icon: require('../../Assets/Images/tshirt3.jpeg'),
+    tshirt4_icon: require('../../Assets/Images/tshirt4.jpeg'),
+    tshirt5_icon: require('../../Assets/Images/tshirt5.jpg'),
+    tshirt6_icon: require('../../Assets/Images/tshirt6.jpg'),
+    tshirt7_icon: require('../../Assets/Images/tshirt7.jpeg'),
+
+    // jeans images
+
+    jeans1_icon: require('../../Assets/Images/jeans1.jpeg'),
+    jeans2_icon: require('../../Assets/Images/jeans2.jpeg'),
+    jeans3_icon: require('../../Assets/Images/jeans3.jpeg'),
+    jeans4_icon: require('../../Assets/Images/jeans4.jpeg'),
+    jeans5_icon: require('../../Assets/Images/jeans5.jpeg'),
+    jeans6_icon: require('../../Assets/Images/jeans6.jpeg'),
+    jeans7_icon: require('../../Assets/Images/jeans7.jpeg'),
+
+    // shoes images
+
+    shoes1_icon: require('../../Assets/Images/shoes1.jpg'),
+    shoes2_icon: require('../../Assets/Images/shoes2.jpg'),
+    shoes3_icon: require('../../Assets/Images/shoes3.jpg'),
+    shoes4_icon: require('../../Assets/Images/shoes4.jpg'),
+    shoes5_icon: require('../../Assets/Images/shoes5.jpg'),
+    shoes6_icon: require('../../Assets/Images/shoes6.jpg'),
+    shoes7_icon: require('../../Assets/Images/shoes7.jpg'),
+
+    // shirts images
+
+    shirts1_icon: require('../../Assets/Images/shirt1.jpg'),
+    shirts2_icon: require('../../Assets/Images/shirts2.jpg'),
+    shirts3_icon: require('../../Assets/Images/shirts3.jpg'),
+    shirts4_icon: require('../../Assets/Images/shirts4.jpg'),
+    shirts5_icon: require('../../Assets/Images/shirts5.jpg'),
+    shirts6_icon: require('../../Assets/Images/shirts6.jpg'),
+    shirts7_icon: require('../../Assets/Images/shirts7.jpg'),
+
 };
 
 export default Images;
