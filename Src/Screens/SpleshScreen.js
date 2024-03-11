@@ -2,13 +2,32 @@
 import LottieView from 'lottie-react-native';
 import React, { useEffect } from 'react';
 import { View, StyleSheet, Image, } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const SpleshScreen = ({ navigation }) => {
     useEffect(() => {
-        setTimeout(() => {
-            navigation.replace('LoginScreen');
-        }, 3000);
-    }, []);
+        const fetchData = async () => {
+            try {
+                const emailOrMobile = await AsyncStorage.getItem('emailOrMobile');
+                const password = await AsyncStorage.getItem('password');
+
+                if (emailOrMobile && password) {
+                    setTimeout(() => {
+                        navigation.navigate('HomeScreen');
+                    }, 3000);
+                } else {
+                    setTimeout(() => {
+                        navigation.navigate('LoginScreen');
+                    }, 3000);
+                }
+            } catch (error) {
+                console.error('AsyncStorage Error:', error);
+            }
+        };
+
+        fetchData();
+    }, [navigation]);
 
     return (
         <View style={styles.container}>

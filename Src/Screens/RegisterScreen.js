@@ -18,10 +18,7 @@ const RegisterScreen = ({ navigation }) => {
     const [emailError, setemailError] = useState('')
 
     const handleRegister = async () => {
-        // if (!firstName || !lastName || !mobileNumber || !email || !password || !city) {
-        //     Alert.alert('All fields are required');
-        //     return;
-        // }
+
         if (!firstName) {
             setfirstnameerror('Please Enter First Name')
         } else if (!lastName) {
@@ -71,6 +68,10 @@ const RegisterScreen = ({ navigation }) => {
                         loop
                         style={styles.animation}
                     />
+                </View>
+                <View style={{ padding: 10, justifyContent: "center", alignItems: "center", bottom: 12 }}>
+                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#ffffff', textDecorationLine: "underline" }}>
+                        Register Here</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <TextInput

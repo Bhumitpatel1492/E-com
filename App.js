@@ -1,9 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { View, StatusBar } from 'react-native';
-import Root from './Src/Navigation/Root';
+// import Root from './Src/Navigation/Root';
 import store from './Src/redux/Store';
 import colors from './Src/Utils/Colours';
+import Root from './Src/Navigation/Root';
 
 const App = () => {
 

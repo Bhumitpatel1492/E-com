@@ -34,19 +34,20 @@ const shoes7 = Images.shoes7_icon;
 
 // shirts images
 
-const shirt1 = Images.tshirt1_icon;
-const shirt2 = Images.tshirt2_icon;
-const shirt3 = Images.tshirt3_icon;
-const shirt4 = Images.tshirt4_icon;
-const shirt5 = Images.tshirt5_icon;
-const shirt6 = Images.tshirt6_icon;
-const shirt7 = Images.tshirt7_icon;
+const shirt1 = Images.shirts1_icon;
+const shirt2 = Images.shirts2_icon;
+const shirt3 = Images.shirts3_icon;
+const shirt4 = Images.shirts4_icon;
+const shirt5 = Images.shirts5_icon;
+const shirt6 = Images.shirts6_icon;
+const shirt7 = Images.shirts7_icon;
 
 
 
 
 export const ProductData = [
-    {category: "tshirt",
+    {
+        category: "tshirt",
         data: [
             {
                 id: 1,
@@ -120,7 +121,8 @@ export const ProductData = [
             }
         ],
     },
-    {category: "jeans",
+    {
+        category: "jeans",
         data: [
             {
                 id: 1,
@@ -194,7 +196,8 @@ export const ProductData = [
             }
         ],
     },
-    { category: "shoes",
+    {
+        category: "shoes",
         data: [
             {
                 id: 1,
@@ -268,7 +271,8 @@ export const ProductData = [
             }
         ],
     },
-    {category: "watch",
+    {
+        category: "watch",
         data: [
             {
                 id: 1,
@@ -342,7 +346,8 @@ export const ProductData = [
             }
         ],
     },
-    {category: "shirt",
+    {
+        category: "shirt",
         data: [
             {
                 id: 1,
@@ -356,7 +361,7 @@ export const ProductData = [
             },
             {
                 id: 2,
-                image:  shirt2,
+                image: shirt2,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
@@ -416,7 +421,8 @@ export const ProductData = [
             }
         ],
     },
-    {category: "Mobile",
+    {
+        category: "Mobile",
         data: [
             {
                 id: 1,
@@ -499,7 +505,8 @@ export const ProductData = [
             }
         ],
     },
-    {category: "kitcheAppliances",
+    {
+        category: "kitcheAppliances",
         data: [
             {
                 id: 1,

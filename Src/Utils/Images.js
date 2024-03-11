@@ -88,17 +88,17 @@ const Images = {
     shoes4_icon: require('../../Assets/Images/shoes4.jpg'),
     shoes5_icon: require('../../Assets/Images/shoes5.jpg'),
     shoes6_icon: require('../../Assets/Images/shoes6.jpg'),
-    shoes7_icon: require('../../Assets/Images/shoes7.jpg'),
+    shoes7_icon: require('../../Assets/Images/shoes7.jpeg'),
 
     // shirts images
 
     shirts1_icon: require('../../Assets/Images/shirt1.jpg'),
-    shirts2_icon: require('../../Assets/Images/shirts2.jpg'),
-    shirts3_icon: require('../../Assets/Images/shirts3.jpg'),
-    shirts4_icon: require('../../Assets/Images/shirts4.jpg'),
-    shirts5_icon: require('../../Assets/Images/shirts5.jpg'),
-    shirts6_icon: require('../../Assets/Images/shirts6.jpg'),
-    shirts7_icon: require('../../Assets/Images/shirts7.jpg'),
+    shirts2_icon: require('../../Assets/Images/shirt2.jpg'),
+    shirts3_icon: require('../../Assets/Images/shirt3.jpg'),
+    shirts4_icon: require('../../Assets/Images/shirt4.jpg'),
+    shirts5_icon: require('../../Assets/Images/shirt5.jpg'),
+    shirts6_icon: require('../../Assets/Images/shirt6.jpg'),
+    shirts7_icon: require('../../Assets/Images/shirt7.jpg'),
 
 };
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LottieView from 'lottie-react-native';
+import colors from '../Utils/Colours';
 
 const LoginScreen = ({ navigation }) => {
     const [emailOrMobile, setEmailOrMobile] = useState('');
@@ -21,10 +22,6 @@ const LoginScreen = ({ navigation }) => {
             setPasswordError('Please enter your password');
             return;
         }
-
-
-
-
         try {
             await AsyncStorage.setItem('emailOrMobile', emailOrMobile);
             await AsyncStorage.setItem('password', password);
@@ -47,6 +44,9 @@ const LoginScreen = ({ navigation }) => {
                         loop
                         style={styles.animation}
                     />
+                </View>
+                <View style={{ padding: 10, justifyContent: "center", alignItems: "center", bottom: 12 }}>
+                    <Text style={{ fontSize: 18, fontWeight: '600', color: '#ffffff', textDecorationLine: "underline" }}>Login Here</Text>
                 </View>
                 <View style={styles.inputContainer}>
                     <TextInput
@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginBottom: 20,
         backgroundColor: 'orange',
-        marginTop: 40
+        marginTop: 40,
+
     },
     animation: {
         width: 250,
