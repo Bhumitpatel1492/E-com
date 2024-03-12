@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItemToCart, removeItemFromWishlist } from '../../redux/actions/Actions';
+import { addItemToCart, addItemToWishlist, removeItemFromCart, removeItemFromWishlist } from '../../redux/actions/Actions';
 import CartItem from '../../common/Cartitem';
 
 const WishlistScreen = () => {
@@ -15,10 +15,11 @@ const WishlistScreen = () => {
                 data={cartData}
                 renderItem={({ item, index }) => (
                     <CartItem
-                        iswishlist={true} // Assuming this should be a boolean value
+                        iswishlist={true}
                         onRemoveFromWishlist={() => dispatch(removeItemFromWishlist(index))}
-                        // onRemoveItem={() => dispatch(removeItemFromWishlist(index))}
+                        onRemoveItem={() => dispatch(removeItemFromCart(index))}
                         onAddToCart={(x) => dispatch(addItemToCart(x))}
+                        addItemToWishlist={(x) => dispatch(addItemToWishlist(x))}
                         item={item}
                     />
                 )}

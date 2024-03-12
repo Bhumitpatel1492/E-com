@@ -63,7 +63,7 @@ const MainScreen = () => {
                         renderItem={({ item, index }) => {
                             return (
                                 <MyProductitem item={item} onAddToWishlist={(x) => {
-                                    dispatch(addItemToWishlist(x))
+                                    dispatch(addItemToWishlist(item))
                                 }}
                                     onAddToCart={(x) => {
                                         dispatch(addItemToCart(item))
@@ -81,7 +81,7 @@ const MainScreen = () => {
                         renderItem={({ item, index }) => {
                             return (
                                 <MyProductitem item={item} onAddToWishlist={(x) => {
-                                    dispatch(addItemToWishlist(x))
+                                    dispatch(addItemToWishlist(item))
                                 }}
                                     onAddToCart={(x) => {
                                         dispatch(addItemToCart(item))
@@ -99,7 +99,7 @@ const MainScreen = () => {
                         renderItem={({ item, index }) => {
                             return (
                                 <MyProductitem item={item} onAddToWishlist={(x) => {
-                                    dispatch(addItemToWishlist(x))
+                                    dispatch(addItemToWishlist(item))
                                 }}
                                     onAddToCart={(x) => {
                                         dispatch(addItemToCart(item))
@@ -117,7 +117,7 @@ const MainScreen = () => {
                         renderItem={({ item, index }) => {
                             return (
                                 <MyProductitem item={item} onAddToWishlist={(x) => {
-                                    dispatch(addItemToWishlist(x))
+                                    dispatch(addItemToWishlist(item))
                                 }}
                                     onAddToCart={(x) => {
                                         dispatch(addItemToCart(item))
@@ -136,7 +136,7 @@ const MainScreen = () => {
                         renderItem={({ item, index }) => {
                             return (
                                 <MyProductitem item={item} onAddToWishlist={(x) => {
-                                    dispatch(addItemToWishlist(x))
+                                    dispatch(addItemToWishlist(item))
                                 }}
                                     onAddToCart={(x) => {
                                         dispatch(addItemToCart(item))
@@ -154,7 +154,7 @@ const MainScreen = () => {
                         renderItem={({ item, index }) => {
                             return (
                                 <MyProductitem item={item} onAddToWishlist={(x) => {
-                                    dispatch(addItemToWishlist(x))
+                                    dispatch(addItemToWishlist(item))
                                 }}
                                     onAddToCart={(x) => {
                                         dispatch(addItemToCart(item))
@@ -172,7 +172,7 @@ const MainScreen = () => {
                         renderItem={({ item, index }) => {
                             return (
                                 <MyProductitem item={item} onAddToWishlist={(x) => {
-                                    dispatch(addItemToWishlist(x))
+                                    dispatch(addItemToWishlist(item))
                                 }}
                                     onAddToCart={(x) => {
                                         dispatch(addItemToCart(item))

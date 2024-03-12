@@ -55,8 +55,7 @@ const HomeScreen = () => {
                         )}
                         <View style={{ width: 20, height: 20, backgroundColor: "red", borderRadius: 10, justifyContent: "center", alignItems: "center", position: "absolute", top: 5, right: 5 }}>
                             <Text style={{ color: colors.white, fontWeight: "600" }}>
-                                {/* {data?.Reducer?.length} */}
-                                {'0'}
+                                {data?.reducers?.length}
                             </Text>
                         </View>
 
@@ -72,8 +71,7 @@ const HomeScreen = () => {
 
                     <View style={{ width: 20, height: 20, backgroundColor: "red", borderRadius: 10, justifyContent: "center", alignItems: "center", position: "absolute", top: 15, right: 20 }}>
                         <Text style={{ color: colors.white, fontWeight: "600" }}>
-                            {/* {data?.wishlistreducer?.length} */}
-                            {'0'}
+                            {data?.wishlistReducer?.length}
                         </Text>
                     </View>
                 </TouchableOpacity>

@@ -17,7 +17,7 @@ const MyProductitem = ({ item, onAddToCart, onAddToWishlist }) => {
                 </TouchableOpacity>
             </View>
             <TouchableOpacity style={style.likebtn} onPress={(item) => onAddToWishlist(item)}>
-                <Ionicons name="heart" size={26} />
+                <Ionicons name="heart-outline" size={26} color="#000000" />
             </TouchableOpacity>
         </View>
     );
