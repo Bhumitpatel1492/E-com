@@ -4,8 +4,11 @@ import { View, StyleSheet, TouchableOpacity, Text, ScrollView, FlatList } from '
 import { ProductData } from '../../Data/ProductData';
 import colors from '../../Utils/Colours';
 import MyProductitem from '../../common/MyProductItem';
+import { useDispatch } from 'react-redux';
+import { addItemToCart, addItemToWishlist } from '../../redux/actions/Actions';
 
 const MainScreen = () => {
+    const dispatch = useDispatch();
 
     const [categoryList, setCategoryList] = useState([]);
     const [MobileList, setMobileList] = useState([]);
@@ -59,7 +62,12 @@ const MainScreen = () => {
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <MyProductitem item={item} />
+                                <MyProductitem item={item} onAddToWishlist={(x) => {
+                                    dispatch(addItemToWishlist(x))
+                                }}
+                                    onAddToCart={(x) => {
+                                        dispatch(addItemToCart(item))
+                                    }} />
                             )
                         }}
                     />
@@ -72,7 +80,12 @@ const MainScreen = () => {
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <MyProductitem item={item} />
+                                <MyProductitem item={item} onAddToWishlist={(x) => {
+                                    dispatch(addItemToWishlist(x))
+                                }}
+                                    onAddToCart={(x) => {
+                                        dispatch(addItemToCart(item))
+                                    }} />
                             )
                         }}
                     />
@@ -85,7 +98,12 @@ const MainScreen = () => {
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <MyProductitem item={item} />
+                                <MyProductitem item={item} onAddToWishlist={(x) => {
+                                    dispatch(addItemToWishlist(x))
+                                }}
+                                    onAddToCart={(x) => {
+                                        dispatch(addItemToCart(item))
+                                    }} />
                             )
                         }}
                     />
@@ -98,7 +116,12 @@ const MainScreen = () => {
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <MyProductitem item={item} />
+                                <MyProductitem item={item} onAddToWishlist={(x) => {
+                                    dispatch(addItemToWishlist(x))
+                                }}
+                                    onAddToCart={(x) => {
+                                        dispatch(addItemToCart(item))
+                                    }} />
                             )
                         }}
                     />
@@ -112,7 +135,12 @@ const MainScreen = () => {
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <MyProductitem item={item} />
+                                <MyProductitem item={item} onAddToWishlist={(x) => {
+                                    dispatch(addItemToWishlist(x))
+                                }}
+                                    onAddToCart={(x) => {
+                                        dispatch(addItemToCart(item))
+                                    }} />
                             )
                         }}
                     />
@@ -125,7 +153,12 @@ const MainScreen = () => {
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <MyProductitem item={item} />
+                                <MyProductitem item={item} onAddToWishlist={(x) => {
+                                    dispatch(addItemToWishlist(x))
+                                }}
+                                    onAddToCart={(x) => {
+                                        dispatch(addItemToCart(item))
+                                    }} />
                             )
                         }}
                     />
@@ -138,7 +171,12 @@ const MainScreen = () => {
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <MyProductitem item={item} />
+                                <MyProductitem item={item} onAddToWishlist={(x) => {
+                                    dispatch(addItemToWishlist(x))
+                                }}
+                                    onAddToCart={(x) => {
+                                        dispatch(addItemToCart(item))
+                                    }} />
                             )
                         }}
                     />

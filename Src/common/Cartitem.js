@@ -4,7 +4,7 @@ import { View, StyleSheet, Touchable, Text, Image, TouchableOpacity } from 'reac
 import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 import colors from '../Utils/Colours';
 
-const MyProductitem = ({ item, onAddToCart, onAddToWishlist }) => {
+const CartItem = ({ item, onRemoveItem, onAddToWishlist, iswishlist, onRemoveFromWishlist, onAddToCart }) => {
 
     return (
         <View style={style.container}>
@@ -12,18 +12,28 @@ const MyProductitem = ({ item, onAddToCart, onAddToWishlist }) => {
             <Text numberOfLines={1} ellipsizeMode='tail' style={style.productname}>{item.name}</Text>
             <View style={style.cartview}>
                 <Text style={style.pricetxt}>{"₹" + item.price}</Text>
-                <TouchableOpacity style={style.addcartbtn} onPress={() => onAddToCart(item)} >
-                    <Text style={{ color: colors.black }}>add to cart</Text>
-                </TouchableOpacity>
+                {iswishlist ? (
+                    <TouchableOpacity style={style.addcartbtn} onPress={() => onAddToCart(item)} >
+                        <Text>Add To Cart</Text>
+                    </TouchableOpacity>
+                ) : (<TouchableOpacity style={style.addcartbtn} onPress={() => onRemoveItem(item)} >
+                    <Text>Remove Item</Text>
+                </TouchableOpacity>)}
             </View>
-            <TouchableOpacity style={style.likebtn} onPress={() => onAddToWishlist(item)}>
-                <Ionicons name="heart" size={26} />
-            </TouchableOpacity>
+
+            {
+                iswishlist ? (<TouchableOpacity style={style.likebtn} onPress={() => onRemoveFromWishlist(item)}>
+                    {/* add red image in this images */}
+                    {/* <Image source={require('../assets/heart_file.png')} style={style.likeimg} tintColor='red' /> */}
+                </TouchableOpacity>) : (<TouchableOpacity style={style.likebtn} onPress={() => onAddToWishlist(item)}>
+                    {/* <Image source={require('../assets/heart.png')} style={style.likeimg} /> */}
+                </TouchableOpacity>)
+            }
         </View>
     );
 };
 
-export default MyProductitem;
+export default CartItem;
 
 
 const style = StyleSheet.create({

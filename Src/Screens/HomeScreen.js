@@ -8,6 +8,7 @@ import SearchScreen from '../components/Bottom/Search';
 import AddcartScreen from '../components/Bottom/Addcart';
 import WishlistScreen from '../components/Bottom/Wishlist';
 import ProfileScreen from '../components/Bottom/Profile';
+import { useSelector } from 'react-redux';
 
 
 
@@ -15,6 +16,7 @@ import ProfileScreen from '../components/Bottom/Profile';
 const HomeScreen = () => {
 
     const [selectedTab, setSelectedTab] = useState(0);
+    const data = useSelector(state => state);
 
 
     return (
@@ -51,7 +53,12 @@ const HomeScreen = () => {
                         ) : (
                             <Ionicons name="bag-handle-outline" size={26} color="#000000" />
                         )}
-
+                        <View style={{ width: 20, height: 20, backgroundColor: "red", borderRadius: 10, justifyContent: "center", alignItems: "center", position: "absolute", top: 5, right: 5 }}>
+                            <Text style={{ color: colors.white, fontWeight: "600" }}>
+                                {/* {data?.Reducer?.length} */}
+                                {'0'}
+                            </Text>
+                        </View>
 
                     </TouchableOpacity>
                 </View>
@@ -63,7 +70,12 @@ const HomeScreen = () => {
                         <Ionicons name="heart-outline" size={26} color="#000000" />
                     )}
 
-
+                    <View style={{ width: 20, height: 20, backgroundColor: "red", borderRadius: 10, justifyContent: "center", alignItems: "center", position: "absolute", top: 15, right: 20 }}>
+                        <Text style={{ color: colors.white, fontWeight: "600" }}>
+                            {/* {data?.wishlistreducer?.length} */}
+                            {'0'}
+                        </Text>
+                    </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={style.tabbtn} onPress={() => setSelectedTab(4)} >
@@ -72,6 +84,8 @@ const HomeScreen = () => {
                     ) : (
                         <Ionicons name="person-outline" size={26} color="#000000" />
                     )}
+
+
                 </TouchableOpacity>
 
             </View>
