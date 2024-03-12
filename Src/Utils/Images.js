@@ -110,6 +110,11 @@ const Images = {
     watch6_icon: require('../../Assets/Images/watch6.jpeg'),
     watch7_icon: require('../../Assets/Images/watch7.jpeg'),
 
+    // profile icons 
+
+    setting_icon: require('../../Assets/Images/setting.png'),
+    profile_icon: require('../../Assets/Images/user.png')
+
 };
 
 export default Images;
