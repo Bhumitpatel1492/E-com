@@ -26,7 +26,7 @@ const LoginScreen = ({ navigation }) => {
             await AsyncStorage.setItem('emailOrMobile', emailOrMobile);
             await AsyncStorage.setItem('password', password);
 
-            navigation.navigate('HomeStack', { screen: 'Home' })
+            navigation.navigate('HomeScreen')
 
         } catch (error) {
             console.log('Error storing data:', error);
