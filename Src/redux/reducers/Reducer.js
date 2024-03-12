@@ -1,4 +1,4 @@
-import { ADD_TO_CART, ADD_TO_WISHLIST, REMOVE_FROM_CART, REMOVE_FROM_WISHLIST } from "../Actiontypes";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "../Actiontypes";
 
 const reducers = (state = [], action) => {
     switch (action.type) {
@@ -11,7 +11,7 @@ const reducers = (state = [], action) => {
 
             return deleteArray;
 
-       
+
 
         default: return state;
     }
