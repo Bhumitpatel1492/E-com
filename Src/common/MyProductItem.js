@@ -12,11 +12,11 @@ const MyProductitem = ({ item, onAddToCart, onAddToWishlist }) => {
             <Text numberOfLines={1} ellipsizeMode='tail' style={style.productname}>{item.name}</Text>
             <View style={style.cartview}>
                 <Text style={style.pricetxt}>{"₹" + item.price}</Text>
-                <TouchableOpacity style={style.addcartbtn} onPress={() => onAddToCart(item)} >
+                <TouchableOpacity style={style.addcartbtn} onPress={(item) => onAddToCart(item)} >
                     <Text style={{ color: colors.black }}>add to cart</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity style={style.likebtn} onPress={() => onAddToWishlist(item)}>
+            <TouchableOpacity style={style.likebtn} onPress={(item) => onAddToWishlist(item)}>
                 <Ionicons name="heart" size={26} />
             </TouchableOpacity>
         </View>

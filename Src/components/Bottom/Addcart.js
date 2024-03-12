@@ -2,13 +2,15 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeItemFromCart } from '../../redux/actions/Actions';
+import { addItemToWishlist, removeItemFromCart } from '../../redux/actions/Actions';
 import CartItem from '../../common/Cartitem';
 
 const AddcartScreen = () => {
     const [categoryList, setCategoryList] = useState([]);
-    const cartData = useSelector(state => state.Reducer);
+    const cartData = useSelector(state => state.reducers);
     const dispatch = useDispatch()
+
+    console.log('cart---data---->', cartData);
     // setCategoryList(cartData);
     return (
         <View style={style.container}>
@@ -16,7 +18,7 @@ const AddcartScreen = () => {
                 data={cartData}
                 renderItem={({ item, index }) => (
                     <CartItem
-                        onAddToCart={(x) => onAddToWishlist(x)}
+                        onAddToCart={(x) => dispatch(addItemToWishlist(x))}
                         onRemoveItem={() => {
                             dispatch(removeItemFromCart(index));
                         }}
