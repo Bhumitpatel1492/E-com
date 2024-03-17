@@ -35,7 +35,7 @@ const ProfileScreen = () => {
             <TouchableOpacity style={[style.addressbtn, { marginTop: 20 }]} onPress={() => navigation.navigate('MyAddress')}>
                 <Text style={{}}>My Address</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={style.addressbtn} onPress={() => navigation.navigate('orderdetails')}>
+            <TouchableOpacity style={style.addressbtn} onPress={() => navigation.navigate('Orderdetails')}>
                 <Text style={{}}>My Order</Text>
             </TouchableOpacity>
             <TouchableOpacity style={style.addressbtn}>

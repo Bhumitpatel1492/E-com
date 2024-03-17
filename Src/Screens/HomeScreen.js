@@ -21,6 +21,7 @@ const HomeScreen = () => {
 
     return (
         <View style={style.container}>
+            <StatusBar backgroundColor={colors.sky} barStyle="dark-content" />
 
             {
                 selectedTab == 0 ? <MainScreen /> : selectedTab == 1 ? <SearchScreen /> : selectedTab == 2 ? <AddcartScreen /> : selectedTab == 3 ? <WishlistScreen /> : <ProfileScreen />

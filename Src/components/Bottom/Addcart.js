@@ -31,7 +31,13 @@ const AddcartScreen = () => {
                         />
                     )}
                 />)
-                : (<Text>No item in cart</Text>)
+                : (
+                    <View style={{ flex: 1, justifyContent: 'center', alignItems: "center" }}>
+                        <Text style={{ fontSize: 18, textAlign: "center", justifyContent: 'center', fontWeight: "600" }}>
+                            NO ITEM IN CART
+                        </Text>
+                    </View>
+                )
             }
 
 

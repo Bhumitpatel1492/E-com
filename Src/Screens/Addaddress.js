@@ -2,7 +2,6 @@ import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Alert } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { addAddress } from '../redux/actions/Actions';
-import Images from '../Utils/Images';
 
 
 const Addaddress = ({ navigation }) => {
@@ -15,15 +14,13 @@ const Addaddress = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.view}>
-                {/* <Text style={styles.profiletxt}>My Address</Text> */}
                 <TouchableOpacity style={styles.settingbtn} onPress={() => navigation.goBack()}>
                     <Image source={require('../../Assets/Images/back.png')} style={{ width: 24, height: 24 }} />
-                    {/* <Text style={styles.profiletxt}>Add Address</Text> */}
                 </TouchableOpacity>
             </View>
             <View style={styles.inputContainer}>
                 <View style={styles.inputSection}>
-                    {/* <Image style={styles.searchIcon} source={Images.setting_icon} /> */}
+                    <Image source={require('../../Assets/Images/smart-city.png')} style={styles.icon} />
                     <TextInput
                         placeholderTextColor={"black"}
                         style={styles.input}
@@ -35,7 +32,7 @@ const Addaddress = ({ navigation }) => {
                 </View>
 
                 <View style={styles.inputSection}>
-                    {/* <Image style={styles.searchIcon} source={} /> */}
+                    <Image source={require('../../Assets/Images/buildings.png')} style={styles.icon} />
                     <TextInput
                         placeholderTextColor={"black"}
                         style={styles.input}
@@ -46,7 +43,7 @@ const Addaddress = ({ navigation }) => {
                 </View>
 
                 <View style={styles.inputSection}>
-                    {/* <Image style={styles.searchIcon} source={} /> */}
+                    <Image source={require('../../Assets/Images/mail.png')} style={styles.icon} />
                     <TextInput
                         placeholderTextColor={"black"}
                         style={styles.input}
@@ -81,7 +78,8 @@ export default Addaddress;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    }, view: {
+    },
+    view: {
         width: '100%',
         height: 70,
         justifyContent: "space-between",
@@ -94,7 +92,6 @@ const styles = StyleSheet.create({
         marginLeft: 15
     },
     settingbtn: {
-
         borderWidth: 0.2,
         padding: 7,
         borderRadius: 10,
@@ -103,12 +100,10 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     inputContainer: {
-        // paddingHorizontal: 20,
-        // backgroundColor: 'green',
-        // paddingVertical: 20,
-        // bottom: 22,
-        // alignItems: "center"
-        height: 300
+        height: 250,
+        // backgroundColor: 'red',
+        justifyContent: "center"
+
     },
     loginButton: {
         marginTop: 10,
@@ -124,20 +119,25 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     input: {
-        width: '80%',
+        width: '78%',
         height: 40,
-        marginBottom: 10,
-        borderWidth: 1,
         borderColor: 'black',
-        padding: 10,
-        borderRadius: 5,
+        marginLeft: 5
     },
     inputSection: {
-        flex: 1,
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
-        // backgroundColor: 'red',
+        borderRadius: 5,
+        borderWidth: 1,
+        width: '80%',
+        padding: 8,
+        marginHorizontal: 32,
+        marginTop: 12
     },
+    icon: {
+        height: 40,
+        width: 40,
+        alignItems: "center"
+    }
 
 });

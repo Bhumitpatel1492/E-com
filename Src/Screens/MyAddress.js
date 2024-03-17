@@ -59,10 +59,11 @@ const styles = StyleSheet.create({
     settingbtn: {
 
         borderWidth: 0.2,
-        padding: 7,
+        padding: 15,
         borderRadius: 10,
         marginRight: 20,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        flexDirection: "row"
     },
 });

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addOrder } from '../redux/actions/Actions';
 import { useNavigation } from '@react-navigation/native';
 import RazorpayCheckout from 'react-native-razorpay';
+import { AlertView } from '../components/AlertView/Alert';
 
 
 
@@ -13,6 +14,7 @@ const Checkout = () => {
     const dispatch = useDispatch()
     const navigation = useNavigation();
     const [selectedAddress, setSelectedAddress] = useState('')
+    const [showAlert, setShowAlert] = useState(false);
     const getTotal = () => {
         let total = 0;
         cartData.map((item) => {
@@ -22,50 +24,88 @@ const Checkout = () => {
         return total;
     }
 
-    const handleplaceorder = () => {
-        var options = {
-            description: 'Credits towards consultation',
-            image: 'https://i.imgur.com/3g7nmJC.png',
-            currency: 'INR',
-            key: '', // Your api key
-            amount: '' + parseInt(getTotal() * 100) + '',
-            name: 'foo',
-            prefill: {
-                email: 'dailydeals@razorpay.com',
-                contact: '6351347992',
-                name: 'Razorpay Software'
-            },
-            theme: { color: '#F37254' }
+    const handlePlaceOrder = () => {
+        if (selectedAddress == '') {
+            setShowAlert(true);
+        } else {
+            var options = {
+                description: 'Credits towards consultation',
+                image: 'https://i.imgur.com/3g7nmJC.png',
+                currency: 'INR',
+                key: 'rzp_test_TvepvKiP66mh1J', // Your api key
+                amount: 1000,
+                name: 'Daily Deals',
+                prefill: {
+                    email: 'dailydeals@razorpay.com',
+                    contact: '6351347992',
+                    name: 'Razorpay Software'
+                },
+                theme: { color: '#F37254' }
+            };
+
+            RazorpayCheckout.open(options)
+                .then((data) => {
+                    if (data?.razorpay_payment_id) {
+                        console.log('data------>', data);
+
+                        dispatch(addOrder({ items: cartData, address: selectedAddress, total: getTotal() }));
+                        navigation.navigate('OrderSuccess', {
+                            status: 'success'
+                        });
+                    } else {
+                        dispatch(addOrder({ items: cartData, address: selectedAddress, total: getTotal() }));
+                        navigation.navigate('OrderSuccess', {
+                            status: 'success'
+                        });
+                    }
+                })
+                .catch((error) => {
+                    console.log('error------->', error.code);
+                    console.log('err0r--2222--->', error.description);
+                    if (error.code === undefined || NaN || "") {
+                        console.log('check --- if --- condition');
+                        dispatch(addOrder({ items: cartData, address: selectedAddress, total: getTotal() }));
+                        navigation.navigate('OrderSuccess', {
+                            status: 'success'
+                        });
+                    } else {
+                        navigation.navigate('OrderSuccess', {
+                            status: 'fail'
+                        });
+                    }
+
+                });
         }
-        RazorpayCheckout.open(options).then((data) => {
-            // handle success
-            alert(`Success: ${data.razorpay_payment_id}`);
-            dispatch(addOrder, { items: cartData, address: selectedAddress, total: getTotal() })
-            navigation.navigate('OrderSuccess', {
-                status: 'success'
-            })
-        }).catch((error) => {
-            // handle failure
-            alert(`Error: ${error.code} | ${error.description}`);
-            alert(`Success: ${data.razorpay_payment_id}`);
-            navigation.navigate('OrderSuccess', {
-                status: 'failed'
-            })
-        });
-    }
+
+
+    };
+
 
     return (
         <View style={style.container}>
             <View>
+                {showAlert == true ? (
+                    <AlertView
+                        showAlert={showAlert}
+                        onDismiss={() => setShowAlert(false)}
+                        // title="Alert"
+                        message="Please select an address"
+                        showCancelButton={false} // Set this to true if you want to show a cancel button
+                        cancelButtonColor="#DD6B55" // Customize the cancel button color if needed
+                        onConfirmPressed={() => setShowAlert(false)} // Callback when the confirm button is pressed
+                    />
+                ) : (null)
+
+                }
                 <FlatList
                     data={cartData}
                     renderItem={({ item, index }) => {
                         return (
                             <View style={style.mainview}>
                                 <Image source={item?.image} style={style.img} />
-                                <View style={{ padding: 10 }}>
+                                <View style={{ padding: 10, }}>
                                     <Text style={{ fontSize: 18 }}>{item?.name}</Text>
-                                    <Text style={{ marginTop: 10 }} >{'₹' + item?.price}</Text>
+                                    <Text style={{ marginTop: 10 }} >{"Price: " + '₹' + item?.price}</Text>
 
                                 </View>
                                 <View style={style.subview}>
@@ -96,12 +136,22 @@ const Checkout = () => {
                     )
                 }} />
             </View>
-            <View>
-                <Text style={style.addtxt}>Select Address</Text>
-                <Text style={style.selecttxt}>{selectedAddress == '' ? 'Please Select Address From Above List' : selectedAddress}</Text>
-            </View>
+            {
+                addressList?.length == 0 ? (
+                    <TouchableOpacity onPress={() => navigation.navigate('MyAddress')}>
+                        <Text style={style.addtxt}>Add Address</Text>
+                        <Text style={style.selecttxt}>{'Please Add Address'}</Text>
+                    </TouchableOpacity>
+                ) : (
+                    <View>
+                        <Text style={style.addtxt}>Select Address</Text>
+                        <Text style={style.selecttxt}>{selectedAddress == '' ? 'Please Select Address From Above List' : selectedAddress}</Text>
+                    </View>
+                )
+            }
+
             <View >
-                <TouchableOpacity style={style.loginButton} onPress={() => handleplaceorder()} >
+                <TouchableOpacity style={style.loginButton} onPress={() => handlePlaceOrder()} >
                     <Text style={style.loginButtonText}>Place Order</Text>
                 </TouchableOpacity>
             </View>
@@ -117,10 +167,14 @@ const style = StyleSheet.create({
         flex: 1,
     },
     mainview: {
-        width: '100%',
-        height: 70,
+        width: '80%',
+        height: 110,
         flexDirection: 'row',
-        marginTop: 10
+        marginTop: 10,
+        // backgroundColor: 'red',
+        justifyContent: "center",
+        alignItems: "center",
+        marginHorizontal: 42
     },
     img: {
         height: 70,
@@ -131,9 +185,9 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingLeft: 20,
+        // paddingLeft: 20,
         paddingRight: 20,
-        borderTopWidth: 0.5,
+        // borderTopWidth: 0.5,
         borderTopColor: '#8c8c8c',
         marginTop: 30,
         height: 50
@@ -164,7 +218,7 @@ const style = StyleSheet.create({
         marginLeft: 20
     },
     loginButton: {
-        marginTop: 10,
+        marginTop: 16,
         backgroundColor: 'green',
         paddingVertical: 10,
         borderRadius: 5,
