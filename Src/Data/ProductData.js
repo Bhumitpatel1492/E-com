@@ -210,71 +210,71 @@ export const ProductData = [
             {
                 id: 1,
                 image: shoes1,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "Shoes1 nike ",
+                productdetails: "Size : 6|7|8|9|10",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1700",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 2,
                 image: shoes2,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "Shoes2 Adidas ",
+                productdetails: "Size : 6|7|8|9|10",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1500",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 3,
                 image: shoes3,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "Shoes3 Jorden",
+                productdetails: "Size : 6|7|8|9|10",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1400",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 4,
                 image: shoes4,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "adidas Air",
+                productdetails: "Size : 6|7|8|9|10",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1400",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 5,
                 image: shoes5,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "AirKing Comfort Shoes",
+                productdetails: "Size : 6|7|8|9|10",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1100",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 6,
                 image: shoes6,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "New Release ",
+                productdetails: "Size : 6|7|8|9|10",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "999",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 7,
                 image: shoes7,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "Air jorder Best quality",
+                productdetails: "Size : 6|7|8|9|10",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1800",
                 deliveryBy: "Monday , 19,june"
             }
         ],
@@ -286,7 +286,7 @@ export const ProductData = [
                 id: 1,
                 image: watch1,
                 name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                productdetails: " 8GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
                 price: "17,299",
@@ -295,8 +295,8 @@ export const ProductData = [
             {
                 id: 2,
                 image: watch2,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
+                name: "Samsung Galaxy ,4GB RAM ",
+                productdetails: " 8GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
                 price: "17,299",
@@ -305,27 +305,27 @@ export const ProductData = [
             {
                 id: 3,
                 image: watch3,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Noice Colorfix Pro ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1700",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 4,
                 image: watch4,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "firebolt new model,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
-                price: "17,299",
+                price: "1000",
                 deliveryBy: "Monday , 19,june"
             },
             {
                 id: 5,
                 image: watch5,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Samsung Galaxy M40 Green ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
@@ -335,7 +335,7 @@ export const ProductData = [
             {
                 id: 6,
                 image: watch6,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Apple Watch 2 pro ,4GB RAM ",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
@@ -345,7 +345,7 @@ export const ProductData = [
             {
                 id: 7,
                 image: watch7,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
+                name: "Apple New lunch Smart watch",
                 productdetails: " 64GB Storage | Upto 8GB RAM ",
                 rating: 3.9,
                 ratingCount: 6808,
@@ -513,80 +513,80 @@ export const ProductData = [
             }
         ],
     },
-    {
-        category: "kitcheAppliances",
-        data: [
-            {
-                id: 1,
-                productImg: productimage,
-                image: productimage,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
-            },
-            {
-                id: 2,
-                image: productimage,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
-            },
-            {
-                id: 3,
-                image: productimage,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
-            },
-            {
-                id: 4,
-                image: productimage,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
-            },
-            {
-                id: 5,
-                image: productimage,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
-            },
-            {
-                id: 6,
-                image: productimage,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
-            },
-            {
-                id: 7,
-                image: productimage,
-                name: "Samsung Galaxy M40 Green ,4GB RAM ",
-                productdetails: " 64GB Storage | Upto 8GB RAM ",
-                rating: 3.9,
-                ratingCount: 6808,
-                price: "17,299",
-                deliveryBy: "Monday , 19,june"
-            }
-        ],
-    },
+    // {
+    //     category: "kitcheAppliances",
+    //     data: [
+    //         {
+    //             id: 1,
+    //             productImg: productimage,
+    //             image: productimage,
+    //             name: "Samsung Galaxy M40 Green ,4GB RAM ",
+    //             productdetails: " 64GB Storage | Upto 8GB RAM ",
+    //             rating: 3.9,
+    //             ratingCount: 6808,
+    //             price: "17,299",
+    //             deliveryBy: "Monday , 19,june"
+    //         },
+    //         {
+    //             id: 2,
+    //             image: productimage,
+    //             name: "Samsung Galaxy M40 Green ,4GB RAM ",
+    //             productdetails: " 64GB Storage | Upto 8GB RAM ",
+    //             rating: 3.9,
+    //             ratingCount: 6808,
+    //             price: "17,299",
+    //             deliveryBy: "Monday , 19,june"
+    //         },
+    //         {
+    //             id: 3,
+    //             image: productimage,
+    //             name: "Samsung Galaxy M40 Green ,4GB RAM ",
+    //             productdetails: " 64GB Storage | Upto 8GB RAM ",
+    //             rating: 3.9,
+    //             ratingCount: 6808,
+    //             price: "17,299",
+    //             deliveryBy: "Monday , 19,june"
+    //         },
+    //         {
+    //             id: 4,
+    //             image: productimage,
+    //             name: "Samsung Galaxy M40 Green ,4GB RAM ",
+    //             productdetails: " 64GB Storage | Upto 8GB RAM ",
+    //             rating: 3.9,
+    //             ratingCount: 6808,
+    //             price: "17,299",
+    //             deliveryBy: "Monday , 19,june"
+    //         },
+    //         {
+    //             id: 5,
+    //             image: productimage,
+    //             name: "Samsung Galaxy M40 Green ,4GB RAM ",
+    //             productdetails: " 64GB Storage | Upto 8GB RAM ",
+    //             rating: 3.9,
+    //             ratingCount: 6808,
+    //             price: "17,299",
+    //             deliveryBy: "Monday , 19,june"
+    //         },
+    //         {
+    //             id: 6,
+    //             image: productimage,
+    //             name: "Samsung Galaxy M40 Green ,4GB RAM ",
+    //             productdetails: " 64GB Storage | Upto 8GB RAM ",
+    //             rating: 3.9,
+    //             ratingCount: 6808,
+    //             price: "17,299",
+    //             deliveryBy: "Monday , 19,june"
+    //         },
+    //         {
+    //             id: 7,
+    //             image: productimage,
+    //             name: "Samsung Galaxy M40 Green ,4GB RAM ",
+    //             productdetails: " 64GB Storage | Upto 8GB RAM ",
+    //             rating: 3.9,
+    //             ratingCount: 6808,
+    //             price: "17,299",
+    //             deliveryBy: "Monday , 19,june"
+    //         }
+    //     ],
+    // },
 ]
