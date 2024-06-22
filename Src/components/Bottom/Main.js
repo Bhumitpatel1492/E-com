@@ -47,6 +47,23 @@ const MainScreen = () => {
     }, []);
 
 
+    const renderloading = () => {
+        return (
+            <SkeletonPlaceholder>
+                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
+                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
+                    <SkeletonPlaceholder.Item marginLeft={20}>
+                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
+                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
+                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
+                    </SkeletonPlaceholder.Item>
+                </SkeletonPlaceholder.Item>
+            </SkeletonPlaceholder>
+        )
+
+    }
+
+
     return (
         <ScrollView style={style.container}>
 
@@ -55,16 +72,7 @@ const MainScreen = () => {
                 <View>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={categoryList}
@@ -84,32 +92,14 @@ const MainScreen = () => {
                 </View>
                 {
                     showloading == true ? (
-                        <SkeletonPlaceholder>
-                            <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                <SkeletonPlaceholder.Item marginLeft={20}>
-                                    <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder.Item>
-                        </SkeletonPlaceholder>
+                        { renderloading }
                     ) : (
                         <Text style={style.tshirttxt} > New shirt</Text>
                     )}
                 <View style={{ marginTop: 20 }}>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={shirtList}
@@ -130,32 +120,14 @@ const MainScreen = () => {
                 </View>
                 {
                     showloading == true ? (
-                        <SkeletonPlaceholder>
-                            <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                <SkeletonPlaceholder.Item marginLeft={20}>
-                                    <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder.Item>
-                        </SkeletonPlaceholder>
+                        { renderloading }
                     ) : (
                         <Text style={style.tshirttxt} > New T-shirt</Text>
                     )}
                 <View style={{ marginTop: 20 }}>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={tshirtList}
@@ -176,32 +148,14 @@ const MainScreen = () => {
                 </View>
                 {
                     showloading == true ? (
-                        <SkeletonPlaceholder>
-                            <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                <SkeletonPlaceholder.Item marginLeft={20}>
-                                    <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder.Item>
-                        </SkeletonPlaceholder>
+                        { renderloading }
                     ) : (
                         <Text style={style.tshirttxt} > New jeansList</Text>
                     )}
                 <View style={{ marginTop: 20 }}>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={jeansList}
@@ -222,32 +176,14 @@ const MainScreen = () => {
                 </View>
                 {
                     showloading == true ? (
-                        <SkeletonPlaceholder>
-                            <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                <SkeletonPlaceholder.Item marginLeft={20}>
-                                    <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder.Item>
-                        </SkeletonPlaceholder>
+                        { renderloading }
                     ) : (
                         <Text style={style.tshirttxt} > New Shoes </Text>
                     )}
                 <View style={{ marginTop: 20 }}>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={shoesList}
@@ -268,16 +204,7 @@ const MainScreen = () => {
                 </View>
                 {
                     showloading == true ? (
-                        <SkeletonPlaceholder>
-                            <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                <SkeletonPlaceholder.Item marginLeft={20}>
-                                    <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder.Item>
-                        </SkeletonPlaceholder>
+                        { renderloading }
                     ) : (
 
                         <Text style={style.tshirttxt} > New Watch</Text>
@@ -285,16 +212,7 @@ const MainScreen = () => {
                 <View style={{ marginTop: 20 }}>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={watchList}
@@ -315,32 +233,14 @@ const MainScreen = () => {
                 </View>
                 {
                     showloading == true ? (
-                        <SkeletonPlaceholder>
-                            <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                <SkeletonPlaceholder.Item marginLeft={20}>
-                                    <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder.Item>
-                        </SkeletonPlaceholder>
+                        { renderloading }
                     ) : (
                         <Text style={style.tshirttxt} > New Mobile</Text>
                     )}
                 <View style={{ marginTop: 20 }}>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={MobileList}
@@ -361,32 +261,14 @@ const MainScreen = () => {
                 </View>
                 {
                     showloading == true ? (
-                        <SkeletonPlaceholder>
-                            <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                <SkeletonPlaceholder.Item marginLeft={20}>
-                                    <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                    <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder.Item>
-                        </SkeletonPlaceholder>
+                        { renderloading }
                     ) : (
                         <Text style={style.tshirttxt} > New kitcheAppliancesList</Text>
                     )}
                 <View style={{ marginTop: 20 }}>
                     {
                         showloading == true ? (
-                            <SkeletonPlaceholder>
-                                <SkeletonPlaceholder.Item flexDirection="row" alignItems="center">
-                                    <SkeletonPlaceholder.Item width={80} height={80} borderRadius={40} />
-                                    <SkeletonPlaceholder.Item marginLeft={20}>
-                                        <SkeletonPlaceholder.Item width={120} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={80} height={20} borderRadius={4} />
-                                        <SkeletonPlaceholder.Item marginTop={6} width={100} height={20} borderRadius={4} />
-                                    </SkeletonPlaceholder.Item>
-                                </SkeletonPlaceholder.Item>
-                            </SkeletonPlaceholder>
+                            { renderloading }
                         ) : (
                             <FlatList
                                 data={kitcheAppliancesList}

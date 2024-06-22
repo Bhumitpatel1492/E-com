@@ -3,6 +3,8 @@ import { View, TextInput, TouchableOpacity, Text, StyleSheet, ScrollView, Status
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LottieView from 'lottie-react-native';
 import colors from '../Utils/Colours';
+import CustomInput from '../components/CustomInput';
+import CustomButtom from '../components/CustomButton';
 
 const LoginScreen = ({ navigation }) => {
     const [emailOrMobile, setEmailOrMobile] = useState('');
@@ -23,8 +25,8 @@ const LoginScreen = ({ navigation }) => {
             return;
         }
         try {
-            await AsyncStorage.setItem('emailOrMobile', emailOrMobile);
-            await AsyncStorage.setItem('password', password);
+            // await AsyncStorage.setItem('emailOrMobile', emailOrMobile);
+            // await AsyncStorage.setItem('password', password);
 
             navigation.navigate('HomeScreen')
 
@@ -49,17 +51,20 @@ const LoginScreen = ({ navigation }) => {
                     <Text style={{ fontSize: 18, fontWeight: '600', color: '#ffffff', textDecorationLine: "underline" }}>Login Here</Text>
                 </View>
                 <View style={styles.inputContainer}>
-                    <TextInput
+                    <CustomInput
+
                         placeholderTextColor={"white"}
                         style={[styles.input, emailOrMobileError && styles.errorBorder]}
                         placeholder="Email or Mobile Number"
                         onChangeText={text => setEmailOrMobile(text)}
                         value={emailOrMobile}
                         onFocus={() => setEmailOrMobileError('')}
+                        showerror
+                        erromessage={emailOrMobileError}
                     />
-                    {emailOrMobileError ? <Text style={styles.errorText}>{emailOrMobileError}</Text> : null}
 
-                    <TextInput
+
+                    <CustomInput
                         placeholderTextColor={"white"}
                         style={[styles.input, passwordError && styles.errorBorder, { marginTop: 12, }]}
                         placeholder="Password"
@@ -67,13 +72,22 @@ const LoginScreen = ({ navigation }) => {
                         value={password}
                         secureTextEntry
                         onFocus={() => setPasswordError('')}
+                        showerror
+                        erromessage={passwordError}
                     />
-                    {passwordError ? <Text style={styles.errorText}>{passwordError}</Text> : null}
+
                 </View>
                 <View >
-                    <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+                    {/* <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
                         <Text style={styles.loginButtonText}>Login</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
+
+                    <CustomButtom
+                        buttonstyle={styles.loginButton}
+                        textstyle={styles.loginButtonText}
+                        title={'Login'}
+                        onPress={() => handleLogin()}
+                    />
                 </View>
                 <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')} style={{ marginTop: 18, alignItems: "center", }}>
                     <Text>Don't Have Any account ? Register here</Text>

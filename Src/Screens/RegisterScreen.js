@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView } from 'react-native';
 import LottieView from 'lottie-react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import CustomInput from '../components/CustomInput';
+import CustomButtom from '../components/CustomButton';
 
 const RegisterScreen = ({ navigation }) => {
     const [firstName, setFirstName] = useState('');
@@ -74,64 +76,84 @@ const RegisterScreen = ({ navigation }) => {
                         Register Here</Text>
                 </View>
                 <View style={styles.inputContainer}>
-                    <TextInput
+                    <CustomInput
                         placeholderTextColor={"white"}
                         style={styles.input}
                         placeholder="First Name"
                         onChangeText={text => setFirstName(text)}
                         value={firstName}
+                        showerror
+                        erromessage={firstNameerror}
+
                     />
-                    {firstNameerror ? <Text style={styles.errorText}>{firstNameerror}</Text> : null}
-                    <TextInput
+
+                    <CustomInput
                         placeholderTextColor={"white"}
                         style={styles.input}
                         placeholder="Last Name"
                         onChangeText={text => setLastName(text)}
                         value={lastName}
+                        showerror
+                        erromessage={lastNameerror}
+
                     />
-                    {lastNameerror ? <Text style={styles.errorText}>{lastNameerror}</Text> : null}
-                    <TextInput
+
+                    <CustomInput
                         placeholderTextColor={"white"}
                         style={styles.input}
                         placeholder="Mobile Number"
                         onChangeText={text => setMobileNumber(text)}
                         value={mobileNumber}
                         keyboardType="numeric"
+                        showerror
+                        erromessage={emailOrMobileError}
                     />
-                    {emailOrMobileError ? <Text style={styles.errorText}>{emailOrMobileError}</Text> : null}
-                    <TextInput
+
+                    <CustomInput
                         placeholderTextColor={"white"}
                         style={styles.input}
                         placeholder="Email"
                         onChangeText={text => setEmail(text)}
                         value={email}
                         keyboardType="email-address"
+                        showerror
+                        erromessage={emailError}
                     />
-                    {emailError ? <Text style={styles.errorText}>{emailError}</Text> : null}
-                    <TextInput
+
+                    <CustomInput
                         placeholderTextColor={"white"}
                         style={styles.input}
                         placeholder="Password"
                         onChangeText={text => setPassword(text)}
                         value={password}
                         secureTextEntry={true}
+                        showerror
+                        erromessage={passwordError}
                     />
-                    {passwordError ? <Text style={styles.errorText}>{passwordError}</Text> : null}
-                    <TextInput
+
+                    <CustomInput
                         placeholderTextColor={"white"}
                         style={styles.input}
                         placeholder="City"
                         onChangeText={text => setCity(text)}
                         value={city}
+                        showerror
+                        erromessage={cityerror}
                     />
-                    {cityerror ? <Text style={styles.errorText}>{cityerror}</Text> : null}
+
                 </View>
 
 
                 <View style={{ marginBottom: 30 }} >
-                    <TouchableOpacity style={styles.loginButton} onPress={handleRegister}>
+                    {/* <TouchableOpacity style={styles.loginButton} onPress={handleRegister}>
                         <Text style={styles.loginButtonText}>Register</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
+                    <CustomButtom
+                        buttonstyle={styles.loginButton}
+                        textstyle={styles.loginButtonText}
+                        title={'Register'}
+                        onPress={() => handleRegister()}
+                    />
                 </View>
             </ScrollView>
         </View>
@@ -166,13 +188,14 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     input: {
-        width: '80%',
+        // width: '100%',
         height: 40,
         marginBottom: 10,
         borderWidth: 1,
         borderColor: 'white',
         padding: 10,
         borderRadius: 5,
+        width: 350
     },
     loginButton: {
         marginTop: 10,
