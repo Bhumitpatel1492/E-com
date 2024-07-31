@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, FlatList, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItemToCart, addItemToWishlist, removeItemFromCart, removeItemFromWishlist } from '../../redux/actions/Actions';
+// import { addItemToCart, addItemToWishlist, removeItemFromCart, removeItemFromWishlist } from '../../redux/actions/Actions';
 import CartItem from '../../common/Cartitem';
 
 const WishlistScreen = () => {
     const [categoryList, setCategoryList] = useState([]);
-    const cartData = useSelector(state => state.wishlistReducer);
-    const dispatch = useDispatch()
+    // const cartData = useSelector(state => state.wishlistReducer);
+    // const dispatch = useDispatch()
     // setCategoryList(cartData);
     return (
         <View style={style.container}>

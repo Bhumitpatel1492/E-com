@@ -5,17 +5,16 @@ import { View, StatusBar } from 'react-native';
 // import store from './Src/redux/Store';
 import colors from './Src/Utils/Colours';
 import Root from './Src/Navigation/Root';
-import store from './Src/redux/store/Store';
 
 const App = () => {
 
   return (
-    <Provider store={store}>
-      <View style={{ flex: 1 }}>
-        <StatusBar backgroundColor={colors.sky} barStyle="dark-content" />
-        <Root />
-      </View>
-    </Provider>
+
+    <View style={{ flex: 1 }}>
+      <StatusBar backgroundColor={colors.sky} barStyle="dark-content" />
+      <Root />
+    </View>
+
   );
 };
 

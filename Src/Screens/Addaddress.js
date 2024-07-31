@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Alert } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { addAddress } from '../redux/actions/Actions';
+// import { addAddress } from '../redux/actions/Actions';
 
 
 const Addaddress = ({ navigation }) => {

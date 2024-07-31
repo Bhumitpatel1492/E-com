@@ -7,7 +7,7 @@ import SearchScreen from '../components/Bottom/Search';
 import AddcartScreen from '../components/Bottom/Addcart';
 import WishlistScreen from '../components/Bottom/Wishlist';
 import ProfileScreen from '../components/Bottom/Profile';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 const HomeScreen = () => {
     const [selectedTab, setSelectedTab] = useState(0);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeAddress } from '../redux/actions/Actions';
+// import { removeAddress } from '../redux/actions/Actions';
 import { useIsFocused } from '@react-navigation/native';
 import Images from '../Utils/Images';
 

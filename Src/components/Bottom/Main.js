@@ -4,8 +4,8 @@ import { View, StyleSheet, TouchableOpacity, Text, ScrollView, FlatList, Activit
 import { ProductData } from '../../Data/ProductData';
 import colors from '../../Utils/Colours';
 import MyProductitem from '../../common/MyProductItem';
-import { useDispatch } from 'react-redux';
-import { addItemToCart, addItemToWishlist } from '../../redux/actions/Actions';
+// import { useDispatch } from 'react-redux';
+// import { addItemToCart, addItemToWishlist } from '../../redux/actions/Actions';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 
 

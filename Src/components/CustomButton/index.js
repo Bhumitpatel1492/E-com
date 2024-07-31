@@ -11,8 +11,8 @@ const CustomButtom = ({
 }) => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={buttonstyle} onPress={onPress}>
-                <Text style={textstyle}>{title}</Text>
+            <TouchableOpacity style={buttonstyle ? buttonstyle : styles.btnStyle} onPress={onPress}>
+                <Text style={textstyle ? textstyle : styles.btntxt}>{title}</Text>
             </TouchableOpacity>
         </View>
     );
@@ -26,6 +26,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
     },
+    btnStyle: {
+        height: 30,
+        width: '60%',
+        backgroundColor: 'red'
+    },
+    btntxt: {
+        fontSize: 15,
+        fontWeight: "600",
+        color: '#fff'
+    }
 });
 
 //make this component available to the app

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet, ScrollView, StatusBar } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import auth from '@react-native-firebase/auth';
 import LottieView from 'lottie-react-native';
 import colors from '../Utils/Colours';
 import CustomInput from '../components/CustomInput';
-import CustomButtom from '../components/CustomButton';
+import CustomButton from '../components/CustomButton';
 
 const LoginScreen = ({ navigation }) => {
     const [emailOrMobile, setEmailOrMobile] = useState('');
@@ -13,25 +13,38 @@ const LoginScreen = ({ navigation }) => {
     const [passwordError, setPasswordError] = useState('');
 
     const handleLogin = async () => {
-
         if (!emailOrMobile) {
             setEmailOrMobileError('Please enter your email or mobile number');
             return;
         } else if (emailOrMobile.length != 10) {
-
-            setEmailOrMobileError('Please enter valid email or mobile number');
+            setEmailOrMobileError('Please enter a valid email or mobile number');
+            return;
         } else if (!password) {
             setPasswordError('Please enter your password');
             return;
         }
+
         try {
-            // await AsyncStorage.setItem('emailOrMobile', emailOrMobile);
-            // await AsyncStorage.setItem('password', password);
+            if (emailOrMobile.includes('@')) {
+                // Email login
+                await auth().signInWithEmailAndPassword(emailOrMobile, password);
+            } else {
+                // Phone login
+                const confirmation = await auth().signInWithPhoneNumber(emailOrMobile);
+                // You may need to handle the confirmation code input here
+                // For simplicity, we are not handling that in this code snippet
+            }
 
-            navigation.navigate('HomeScreen')
-
+            navigation.navigate('HomeScreen');
         } catch (error) {
-            console.log('Error storing data:', error);
+            console.log('Error logging in:', error);
+            if (error.code === 'auth/invalid-email') {
+                setEmailOrMobileError('Invalid email address');
+            } else if (error.code === 'auth/wrong-password') {
+                setPasswordError('Incorrect password');
+            } else {
+                setEmailOrMobileError(error.message);
+            }
         }
     };
 
@@ -52,7 +65,6 @@ const LoginScreen = ({ navigation }) => {
                 </View>
                 <View style={styles.inputContainer}>
                     <CustomInput
-
                         placeholderTextColor={"white"}
                         style={[styles.input, emailOrMobileError && styles.errorBorder]}
                         placeholder="Email or Mobile Number"
@@ -62,11 +74,9 @@ const LoginScreen = ({ navigation }) => {
                         showerror
                         erromessage={emailOrMobileError}
                     />
-
-
                     <CustomInput
                         placeholderTextColor={"white"}
-                        style={[styles.input, passwordError && styles.errorBorder, { marginTop: 12, }]}
+                        style={[styles.input, passwordError && styles.errorBorder, { marginTop: 12 }]}
                         placeholder="Password"
                         onChangeText={text => setPassword(text)}
                         value={password}
@@ -75,25 +85,19 @@ const LoginScreen = ({ navigation }) => {
                         showerror
                         erromessage={passwordError}
                     />
-
                 </View>
-                <View >
-                    {/* <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-                        <Text style={styles.loginButtonText}>Login</Text>
-                    </TouchableOpacity> */}
-
-                    <CustomButtom
+                <View>
+                    <CustomButton
                         buttonstyle={styles.loginButton}
                         textstyle={styles.loginButtonText}
                         title={'Login'}
-                        onPress={() => handleLogin()}
+                        onPress={handleLogin}
                     />
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')} style={{ marginTop: 18, alignItems: "center", }}>
-                    <Text>Don't Have Any account ? Register here</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')} style={{ marginTop: 18, alignItems: "center" }}>
+                    <Text>Don't Have Any account? Register here</Text>
                 </TouchableOpacity>
             </ScrollView>
-
         </View>
     );
 };
@@ -102,18 +106,15 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'orange',
-        // justifyContent: "center"
     },
     scrollViewContent: {
         flexGrow: 1,
-        // justifyContent: 'center',
     },
     animationContainer: {
         alignItems: "center",
         marginBottom: 20,
         backgroundColor: 'orange',
         marginTop: 40,
-
     },
     animation: {
         width: 250,
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
     inputContainer: {
         paddingHorizontal: 20,
         paddingVertical: 20,
-        bottom: 22
+        bottom: 22,
     },
     input: {
         width: '100%',
@@ -132,14 +133,9 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 10,
         paddingHorizontal: 10,
-
     },
     errorBorder: {
         borderColor: 'red',
-    },
-    errorText: {
-        color: 'red',
-        marginBottom: 10,
     },
     loginButton: {
         marginTop: 10,
@@ -155,6 +151,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 });
-
 
 export default LoginScreen;

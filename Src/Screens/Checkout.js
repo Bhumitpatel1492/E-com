@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList } from 'react-native'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addOrder } from '../redux/actions/Actions';
+// import { addOrder } from '../redux/actions/Actions';
 import { useNavigation } from '@react-navigation/native';
 import RazorpayCheckout from 'react-native-razorpay';
 import { AlertView } from '../components/AlertView/Alert';
