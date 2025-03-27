@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import SpleshScreen from '../Screens/SpleshScreen';
 import LoginScreen from '../Screens/LoginScreen';
 import RegisterScreen from '../Screens/RegisterScreen';
-import HomeScreen from '../Screens/Homescreen';
+// import HomeScreen from '../Screens/Homescreen';
 import MyAddress from '../Screens/MyAddress';
 import Addaddress from '../Screens/Addaddress';
 import Checkout from '../Screens/Checkout';
@@ -67,7 +67,7 @@ const Root = () => {
                 <stack.Screen name="SpleshScreen" component={SpleshScreen} />
                 <stack.Screen name="LoginScreen" component={LoginScreen} />
                 <stack.Screen name='RegisterScreen' component={RegisterScreen} />
-                <stack.Screen name='HomeScreen' component={HomeScreen} />
+                {/* <stack.Screen name='HomeScreen' component={HomeScreen} /> */}
                 <stack.Screen name='MyAddress' component={MyAddress} />
                 <stack.Screen name='Addaddress' component={Addaddress} />
                 <stack.Screen name='Checkout' component={Checkout} />
